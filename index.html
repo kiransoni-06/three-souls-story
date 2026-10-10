@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Souls, One Story ♡</title>
+<style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #090809;
+  color: #f8eff2;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+:root {
+  --pink: #dca4b5;
+  --dark: #171116;
+  --border: #49303b;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background: #0b090bea;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  z-index: 5;
+}
+nav a {
+  color: var(--pink);
+  text-decoration: none;
+  margin: 0 9px;
+  font-size: 13px;
+}
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  background: radial-gradient(ellipse, #321b28, #090809 70%);
+}
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(48px, 10vw, 85px);
+  line-height: 1.05;
+  margin: 20px 0;
+}
+.hero h1 em { color: var(--pink); }
+.hero p { max-width: 580px; color: #c8b8c0; }
+.names { color: var(--pink); word-spacing: 12px; }
+.btn {
+  display: inline-block;
+  background: var(--pink);
+  color: #160c11;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 22px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+section { max-width: 1050px; margin: auto; padding: 70px 20px; }
+.kicker {
+  color: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 6vw, 54px);
+  line-height: 1.15;
+}
+.intro { color: #c6b9bf; max-width: 650px; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.photo {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--dark);
+  min-height: 220px;
+}
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.photo:hover img { transform: scale(1.04); }
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 28px 12px 10px;
+  background: linear-gradient(transparent, #080608eF);
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+.card {
+  background: linear-gradient(145deg, #20141b, #100d10);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 23px;
+}
+.card h3 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  margin: 5px 0;
+  color: var(--pink);
+}
+.card p { color: #d0c1c8; }
+.food { border-left: 3px solid var(--pink); }
+.quote {
+  margin-top: 25px;
+  padding: 18px;
+  border-left: 2px solid var(--pink);
+  background: #1b1117;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+}
+button {
+  font: inherit;
+}
+#surprise {
+  display: none;
+  padding: 20px;
+  margin-top: 20px;
+  background: #1a1117;
+  border: 1px solid var(--pink);
+  border-radius: 10px;
+  animation: appear .5s ease;
+}
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+footer {
+  text-align: center;
+  color: #b49ca7;
+  border-top: 1px solid var(--border);
+  padding: 30px 15px;
+}
+@media(max-width: 600px) {
+  nav a { margin: 0 5px; font-size: 11px; }
+  .gallery, .cards { grid-template-columns: 1fr; }
+  .photo, .photo img { min-height: 280px; }
+  section { padding: 52px 17px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#photos">Photos</a>
+  <a href="#school">School Days</a>
+  <a href="#food">Food Department</a>
+  <a href="#ending">Surprise</a>
+</nav>
+
+<header class="hero">
+  <div class="kicker">Three girls · Unlimited chaos</div>
+  <h1>Three Souls,<br><em>One Story.</em></h1>
+  <p>
+    School khatam hua hai, dosti nahi.
+    Reunion hota rahega, roasting chalti rahegi,
+    aur humari bakchodi ka syllabus kabhi complete nahi hoga. 😭
+  </p>
+  <div class="names">KIRAN · DIVYA · RIDDHI</div>
+  <a href="#photos" class="btn">Enter our universe ♡</a>
+</header>
+
+<section id="photos">
+  <div class="kicker">Chapter 01 · Reunion files</div>
+  <h2>Same girls.<br>Same old chaos.</h2>
+  <p class="intro">
+    School ke baad jab bhi milte hain, photos toh banti hi hain.
+    Koi ek photo ki story nahi — humara baar-baar milna hi
+    apne aap mein ek memory hai. 🖤
+  </p>
+
+  <div class="gallery">
+    <div class="photo"><img src="photo1.jpeg" alt="Friendship photo"><div class="caption">Reunion mode ♡</div></div>
+    <div class="photo"><img src="photo2.jpeg" alt="Friendship photo"><div class="caption">Camera ON, please.</div></div>
+    <div class="photo"><img src="photo3.jpeg" alt="Friendship photo"><div class="caption">The original trio</div></div>
+    <div class="photo"><img src="photo4.jpeg" alt="Friendship photo"><div class="caption">Attendance: 3/3</div></div>
+    <div class="photo"><img src="photo5.jpeg" alt="Friendship photo"><div class="caption">Just us being us</div></div>
+    <div class="photo"><img src="photo6.jpeg" alt="Friendship photo"><div class="caption">One more picture!</div></div>
+    <div class="photo"><img src="photo7.jpeg" alt="Friendship photo"><div class="caption">Core memories</div></div>
+    <div class="photo"><img src="photo8.jpeg" alt="Friendship photo"><div class="caption">Trio chronicles</div></div>
+    <div class="photo"><img src="photo9.jpeg" alt="Friendship photo"><div class="caption">Unplanned, iconic</div></div>
+    <div class="photo"><img src="photo10.jpeg" alt="Friendship photo"><div class="caption">Mirror, mirror 😂</div></div>
+    <div class="photo"><img src="photo11.jpeg" alt="Friendship photo"><div class="caption">Always our trio ♡</div></div>
+  </div>
+  <div class="quote">
+    “School ke baad reunion hota hai aur 5 minute mein
+    lagta hai ki hum abhi bhi usi class mein baithe hain.”
+  </div>
+</section>
+
+<section id="school">
+  <div class="kicker">Chapter 02 · School-time crimes</div>
+  <h2>Class mein padhai kam,<br>lore zyada. 💀</h2>
+
+  <div class="cards">
+    <article class="card">
+      <h3>🎤 Private Concert</h3>
+      <p>
+        Hum teen ka apna concert chalta tha.
+        Bas humare alawa koi aur sunne wala nahi hona chahiye.
+      </p>
+      <b>“Hum teen ke saamne Grammy winners.”</b>
+    </article>
+
+    <article class="card">
+      <h3>🧪 Chemistry Period</h3>
+      <p>
+        Chemistry ki class mein bhi baatein karne ka talent
+        alag hi tha. Reaction kis cheez ka ho raha tha,
+        ye toh teacher jaane.
+      </p>
+      <b>“Chemical reaction se pehle conversation.”</b>
+    </article>
+
+    <article class="card">
+      <h3>📐 Maths Sir vs Us</h3>
+      <p>
+        Maths ki class mein sir se roast hona bhi
+        school experience ka compulsory part tha.
+      </p>
+      <b>“Aaj phir humari class lag gayi.”</b>
+    </article>
+
+    <article class="card">
+      <h3>🔥 Roasting Department</h3>
+      <p>
+        Ek dusre ko roast karna full-time job thi.
+        Koi safe nahi, koi break nahi.
+      </p>
+      <b>“Insult with affection.”</b>
+    </article>
+  </div>
+</section>
+
+<section id="food">
+  <div class="kicker">Chapter 03 · Food department</div>
+  <h2>Meetha vs Mirchi 🍫🌶️</h2>
+  <div class="cards">
+    <article class="card food">
+      <h3>🍫 Divya — Meetha Lover</h3>
+      <p>
+        Divya ko meetha de do, phir duniya jaaye bhaad mein. 😂
+        Cake ho ya chocolate, sweet tooth ki apni hi fan following hai.
+      </p>
+      <b>Sweet tooth: 100% unlocked.</b>
+    </article>
+
+    <article class="card food">
+      <h3>🌶️ Riddhi — Spice Level Zero</h3>
+      <p>
+        Baaki logon ke liye jo “thoda sa teekha” hai,
+        woh Riddhi ke liye adventure sport ho sakta hai. 😭
+      </p>
+      <b>Spice tolerance: 0% detected.</b>
+    </article>
+  </div>
+  <div class="quote">
+    Kiran ka food profile abhi classified hai.
+    Investigation jaari hai. 🕵️‍♀️
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Official trio policy</div>
+  <h2>“Pyaar bhi karenge,<br>bezatti bhi karenge.”</h2>
+  <p class="intro">
+    Rule 1: Ek dusre ko roast karna allowed.
+    Rule 2: Bahar wala roast kare toh group meeting hogi.
+    Rule 3: “Bas ek aur photo” kabhi last photo nahi hoti.
+  </p>
+</section>
+
+<section id="ending">
+  <div class="kicker">Final chapter · Serious announcement</div>
+  <h2>And the award goes to… 🏆</h2>
+  <p class="intro">
+    Best school-time singers, Chemistry-period conversationalists,
+    aur lifetime champions of roasting their own friends…
+  </p>
+  <button class="btn" onclick="showSurprise()">
+    Open the final announcement ✨
+  </button>
+
+  <div id="surprise">
+    <h3>THE WINNERS: KIRAN, DIVYA & RIDDHI!</h3>
+    <p>
+      Prize: unlimited reunions, unlimited inside jokes,
+      aur maturity mein absolutely no improvement. 💀
+    </p>
+    <p>
+      School ne attendance register band kar diya,
+      par tum teen ki bakchodi ka register abhi bhi open hai.
+      Chemistry ki gossip retired nahi hui, Maths sir ke roasts
+      legendary hain, Divya ka meetha love permanent hai,
+      aur Riddhi ke liye mirchi ab bhi villain hai.
+    </p>
+    <p>
+      Life kitni bhi busy ho jaaye, reunion plans bante rehne chahiye.
+      Aur photos? Haan, “bas ek aur” wali photos bhi. 😂
+    </p>
+    <h3 style="text-align:center;color:#dca4b5">
+      Three souls. One story.<br>
+      Zero chance of behaving normally. ♡
+    </h3>
+  </div>
+</section>
+
+<footer>
+  Made with ♥ and a suspicious amount of roasting.<br>
+  Kiran · Divya · Riddhi — Three Souls, One Story.
+</footer>
+
+<script>
+function showSurprise() {
+  const box = document.getElementById("surprise");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
+</body>
+</html>
+
